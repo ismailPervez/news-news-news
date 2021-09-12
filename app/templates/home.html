@@ -9,8 +9,10 @@
     <h1>latest news</h1>
     <section class="articles-container">
     {% for article in articles %}
-        <div class="card" style="width: 18rem;">
-            <img src="{{ article.urlToImage }}" class="card-img-top" alt="...">
+        <div class="card">
+            <div class="img-container">
+                <img src="{{ article.urlToImage }}" class="card-img-top" alt="...">
+            </div>
             <div class="card-body">
                 <h5 class="card-title">{{ article.title }}</h5>
                 <p class="card-text">{{ article.description }}</p>
