@@ -1,3 +1,5 @@
 <div class="sources">
-    <a href="#">bbc news</a>
+    {% for source in sources %}
+        <a href="{{ source.id }}">{{ source.id }}</a>
+    {% endfor %}
 </div>

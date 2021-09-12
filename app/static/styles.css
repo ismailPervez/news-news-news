@@ -39,3 +39,20 @@ a:hover {
 .card-title {
     font-weight: bold;
 }
+
+.sources {
+    background-color: #040403;
+    color: white;
+    border-top: 1px solid whitesmoke;
+    padding: 1% 2%;
+    white-space: nowrap;
+    overflow-x: scroll;
+}
+
+.sources a {
+    margin-left: 2%;
+}
+
+.sources a:last-child {
+    margin-left: 0;
+}
