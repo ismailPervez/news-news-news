@@ -1,18 +1,16 @@
 import requests
 from app import app
 
+api_key = app.config["API_KEY"]
 
-# gets the current location of the user
-def get_current_location():
-    res = requests.get('https://extreme-ip-lookup.com/json/')
-    country_code = res.json()["countryCode"].lower()
-
-    return country_code
+# get all news sources
+def get_sources():
+    res = requests.get(f"https://newsapi.org/v2/top-headlines/sources?apiKey={api_key}")
+    return res.json()
 
 # gets the news depending on the resource specified
-def get_news(resource, current_location):
-    api_key = app.config["API_KEY"]
+def get_news(resource, news_source):
     base_url = app.config["BASE_URL"]
-    res = requests.get(base_url.format(resource, 'us', api_key))
-    print(base_url.format(resource, current_location, api_key))
+    res = requests.get(base_url.format(resource, news_source, api_key))
+
     return res.json()
