@@ -80,6 +80,10 @@ main {
     margin-left: 0;
 }
 
+.error-message {
+    text-align: center;
+}
+
 /*responsiveness*/
 @media screen and (max-width: 662px) {
     .articles-container {
