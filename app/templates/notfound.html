@@ -1,0 +1,12 @@
+{% extends 'layout.html' %}
+{% block content %}
+<div class="sources">
+    {% for source in sources %}
+        <a href="{{ source.id }}">{{ source.id }}</a>
+    {% endfor %}
+</div>
+<main>
+    <h1>I think you got lost</h1>
+    <h2>page is not found :(</h2>
+</main>
+{% endblock %}
